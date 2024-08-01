@@ -76,20 +76,18 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+
+          <Text>{
+              new Intl.NumberFormat('de-DE', {
+                  style: 'currency',
+                  currency: 'EUR',
+                  maximumFractionDigits: 2,
+                  minimumFractionDigits: 2,
+                  roundingMode: 'floor',
+                  signDisplay: 'exceptZero',
+              }).format(8537.71)
+          }</Text>
+
         </View>
       </ScrollView>
     </SafeAreaView>
